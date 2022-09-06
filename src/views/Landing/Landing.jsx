@@ -12,7 +12,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useCountdown } from '../../hooks/useCountdown';
 
-const targetDate = 0 * 1000;
+const targetDate = 60 * 1000;
 
 function Landing() {
   const { provider, address } = useWeb3Context();
