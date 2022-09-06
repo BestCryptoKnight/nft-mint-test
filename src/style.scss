@@ -1,0 +1,106 @@
+* {
+    outline: none;
+    box-sizing: border-box;
+    -ms-overflow-style: none !important;
+    /* IE and Edge */
+    scrollbar-width: none !important;
+    /* Firefox */
+    &::-webkit-scrollbar {
+        display: none !important;
+    }
+}
+
+html,
+body,
+#root {
+    font-family: "Poppins";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    // overflow: hidden;
+    // @media(max-wdith: 1000px) {
+    //     overflow: auto;
+    // }
+}
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.app {
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-flow: column;
+    flex-direction: column;
+    z-index: 1;
+    background-size: cover;
+    font-family: "Poppins";
+    // overflow: hidden;
+    transition: all ease 0.33ms;
+    // @media(max-wdith: 1000px) {
+    //     overflow: auto;
+    // }
+}
+
+.MuiDrawer-paperAnchorDockedLeft {
+    border-right: 0 !important;
+}
+
+.ohm-card {
+    max-width: 833px;
+    .card-header {
+        width: 100%;
+        min-height: 33px;
+        margin-bottom: 10px;
+        h5 {
+            font-weight: 600 !important;
+        }
+    }
+    .help-text {
+        margin: 10px 0px;
+    }
+    .data-row {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        margin: 12px 0px;
+    }
+    .data-row-centered {
+        display: flex;
+        justify-content: center;
+        flex-flow: row wrap;
+        margin: 12px 0px;
+        .marginedBtn {
+            margin: 0.3rem;
+        }
+    }
+}
+
+.ohm-pairs {
+    display: flex;
+    align-items: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none !important;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield !important;
+}
+
+a:hover svg {
+    color: inherit;
+}
+.MuiLink-root.active {
+    color: #ffe300 !important;
+    text-decoration: underline;
+}
+.ReactModal__Overlay{
+    background-color: rgba(43, 8, 49,0.6)!important;
+    transition: opacity 0.4s ease 0s!important;
+    position: relative;
+    z-index: 10;
+}

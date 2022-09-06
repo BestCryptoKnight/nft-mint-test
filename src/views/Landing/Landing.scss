@@ -1,0 +1,125 @@
+#landing-view {
+  padding: 200px;
+  padding-top : 100px;
+  min-height: 100vh;
+  .title-box {
+
+    &-view {
+      padding-top: 32px;
+      padding-bottom: 32px;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+
+      @media screen and (min-width : 370px) {
+        padding-left: 24px;
+        padding-right: 24px
+      }
+
+      padding-left : 20px;
+      padding-right : 20px;
+
+      h1 {
+        font-size: 48px;
+        line-height: 1.1;
+        font-family: Comic;
+        font-weight: 300;
+
+        color: rgb(255, 255, 255);
+        margin-bottom: 24px;
+
+        @media screen and (min-width: 968px) {
+          font-size: 56px;
+        }
+
+      }
+
+      h2 {
+        line-height: 1.1;
+        font-size: 600px;
+        font-size: 24px;
+        color: rgb(21, 110, 155);
+
+        @media screen and (min-width: 968px) {
+          font-size: 24px;
+        }
+
+        @media screen and (max-width : 550px) {
+          font-size: 21px;
+        }
+      }
+    }
+  }
+
+  .warning-box {
+    background-image: linear-gradient(320deg, rgb(214, 132, 2), rgb(255, 188, 81));
+    padding: 2rem;
+    margin: 1rem 0px 0px;
+    text-align: center;
+    position: relative;
+    color: black;
+
+    &-icon {
+      width: 140px;
+      position: absolute;
+      top: calc(50% - 78px);
+      left: calc(50% - 32rem);
+      transform: rotate(-16deg);
+      fill: rgba(255, 255, 255, 0.533);
+
+      align-self: center;
+      flex-shrink: 0;
+    }
+
+    &-title {
+      font-weight: bold;
+      color: black;
+      text-align: center;
+    }
+
+    &-message1 {
+      font-size: 1rem;
+      margin: 1rem 0px;
+      padding: 0px;
+      border: 0px;
+    }
+
+    &-message2 {
+      font-size: 0.9rem;
+    }
+  }
+
+  .lp-container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: calc(100vh - 64px);
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+    @media screen and (min-width: 576px) {
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+
+    @media screen and (min-width: 968px) {
+      padding-top: 32px;
+      padding-bottom: 32px;
+    }
+
+    .lp-boxes {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      vertical-align: baseline;
+
+      >* {
+        min-width: 280px;
+        max-width: 31.5%;
+        width: 100%;
+        margin: 0px 8px 32px;
+      }
+    }
+  }
+}
