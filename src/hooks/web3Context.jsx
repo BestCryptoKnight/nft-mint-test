@@ -124,8 +124,8 @@ export const Web3ContextProvider = ({ children }) => {
       return;
     }
 
-    setAddress(connectedAddress);
     setProvider(connectedProvider);
+    setAddress(connectedAddress);
     setConnected(true);
 
     return connectedProvider;

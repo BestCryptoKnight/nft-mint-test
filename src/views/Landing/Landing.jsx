@@ -12,7 +12,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useCountdown } from '../../hooks/useCountdown';
 
-const targetDate = 60 * 1000;
+const targetDate = 0 * 1000;
 
 function Landing() {
   const { provider, address } = useWeb3Context();
@@ -29,8 +29,6 @@ function Landing() {
     setCurTime(targetDate + new Date().getTime())
     getCount()
   }, [address])
-
-  console.log(days, hours, minutes, seconds)
 
   const mint = async() => {
     if(!address) {
