@@ -12,7 +12,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useCountdown } from '../../hooks/useCountdown';
 
-const targetDate = 1 * 1000;
+const targetDate = 60 * 1000;
 
 function Landing() {
   const { provider, address } = useWeb3Context();
@@ -108,13 +108,13 @@ const ShowCounter = ({ days, hours, minutes, seconds }) => {
       <div
         className="countdown-link"
       >
-        <DateTimeDisplay value={days} type={'Days'} isDanger={days <= 3} />
+        <DateTimeDisplay value={days} type={'Days'} isDanger={days * 3600 * 24 + hours * 3600 + minutes * 60 + seconds <= 10} />
         <p>:</p>
-        <DateTimeDisplay value={hours} type={'Hours'} isDanger={false} />
+        <DateTimeDisplay value={hours} type={'Hours'} isDanger={days * 3600 * 24 + hours * 3600 + minutes * 60 + seconds <= 10} />
         <p>:</p>
-        <DateTimeDisplay value={minutes} type={'Mins'} isDanger={false} />
+        <DateTimeDisplay value={minutes} type={'Mins'} isDanger={days * 3600 * 24 + hours * 3600 + minutes * 60 + seconds <= 10} />
         <p>:</p>
-        <DateTimeDisplay value={seconds} type={'Seconds'} isDanger={false} />
+        <DateTimeDisplay value={seconds} type={'Seconds'} isDanger={days * 3600 * 24 + hours * 3600 + minutes * 60 + seconds <= 10} />
       </div>
     </ShouwCounterWraper>
   );
