@@ -17,7 +17,7 @@ function TopBar({ theme }) {
       }
     });
   }, []);
-
+  console.log("hello")
   useEffect(() => {
     console.log(hamburgeropen)
   }, [hamburgeropen])
